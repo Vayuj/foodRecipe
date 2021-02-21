@@ -1,0 +1,11 @@
+<!-- <p>recipe-card works!</p>-->
+<div class="card">
+    <img class="card-img-top" src="{{recipeCard.image}}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{recipeCard.label}}</h5>
+      <div class="card-text"><div *ngFor="let hl of recipeCard.healthLabels">{{hl}} </div></div>
+      <!-- <div class="card-text">{{recipeCard.healthLabels}}</div> -->
+      <p style="color: steelblue;">Calories: {{recipeCard.calories}}</p>
+      <a (click)="getRecipe(recipeCard.uri)" class="btn btn-primary">Lets Cook!!</a>
+    </div>
+</div>

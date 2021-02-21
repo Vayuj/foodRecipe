@@ -1,0 +1,15 @@
+#home{
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('../../assets/images/background1.jpg');
+    background-size:100% 100%;
+    background-position: center;
+    width:100vw;
+    height:90vh;
+    text-align:center;
+}
+
+.text-box{
+    font-family:URW Chancery L, cursive;
+    font-size: 10vh;
+    color:white;
+    padding-top:10%
+}

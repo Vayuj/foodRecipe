@@ -1,0 +1,26 @@
+<!-- <p>recipe-detail works!</p> -->
+<div class="my-2 mx-4">
+    <div style="text-align: center">
+        <img src="{{recipeDetails?.image}}" style="width:300px;height:300px;">
+    </div>
+    <div style="text-align:center;">
+        <strong>Recipe Name: {{recipeDetails?.label}}</strong><br>
+        <a href="#">{{recipeDetails?.url}}</a><br>
+        {{recipeDetails?.healthLabels}}<br>
+        Calories: {{recipeDetails?.calories}}
+    </div>
+        <span style="text-decoration:underline">Nutrients:</span>
+        <ul>
+            <span *ngIf="recipeDetails?.totalNutrients.TOCPHA"><li>Vitamin E: {{recipeDetails?.totalNutrients.TOCPHA?.quantity}} {{recipeDetails.totalNutrients.TOCPHA?.unit}}</li></span>
+            <span *ngIf="recipeDetails?.totalNutrients.VITA_RAE"><li>Vitamin A: {{recipeDetails?.totalNutrients.VITA_RAE?.quantity}} {{recipeDetails.totalNutrients.VITA_RAE?.unit}}</li></span>
+            <span *ngIf="recipeDetails?.totalNutrients.VITB6A"><li>Vitamin B6: {{recipeDetails?.totalNutrients.VITB6A?.quantity}} {{recipeDetails.totalNutrients.VITB6A?.unit}}</li></span>
+            <span *ngIf="recipeDetails?.totalNutrients.VITB12"><li>Vitamin B12: {{recipeDetails?.totalNutrients.VITB12?.quantity}} {{recipeDetails.totalNutrients.VITB12?.unit}}</li></span>
+            <span *ngIf="recipeDetails?.totalNutrients.VITC"><li>Vitamin C: {{recipeDetails?.totalNutrients.VITC?.quantity}} {{recipeDetails.totalNutrients.VITC?.unit}}</li></span>
+            <span *ngIf="recipeDetails?.totalNutrients.VITC"><li>Vitamin D: {{recipeDetails?.totalNutrients.VITD?.quantity}} {{recipeDetails.totalNutrients.VITD?.unit}}</li></span>
+            <span *ngIf="recipeDetails?.totalNutrients.VITK1"><li>Vitamin K: {{recipeDetails?.totalNutrients.VITK1?.quantity}} {{recipeDetails.totalNutrients.VITK1?.unit}}</li></span>
+        </ul>
+        <span style="text-decoration:underline;">Ingredients:</span>
+        <ol>
+            <li *ngFor="let ele of recipeDetails?.ingredientLines">{{ele}}</li>
+        </ol>
+</div>
